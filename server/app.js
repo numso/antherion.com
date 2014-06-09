@@ -6,7 +6,7 @@ var express = require('express');
 var  stylus = require('stylus');
 
 var app = express();
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3010);
 
 var sessOptions = {
   key: 'antherion.sid',
