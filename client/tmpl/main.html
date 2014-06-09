@@ -1,0 +1,11 @@
+<div id="mainPage">
+  <div style="padding-left:15px">
+    <div ng-repeat="grp in groups">
+      <div class="title">{{grp.title}}</div>
+      <div ng-repeat="app in grp.apps" style="background-color:{{app.color1}}" class="app" ng-click="goTo(app.key)">
+        <img ng-src="img/{{app.key}}/icon.jpg">
+        <div class="caption">{{app.title}}</div>
+      </div>
+    </div>
+  </div>
+</div>

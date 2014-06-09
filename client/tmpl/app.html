@@ -1,0 +1,17 @@
+<div id="appPage" style="background: {{app.color1}};background: -moz-linear-gradient(right, {{app.color1}}, {{app.color2}});background: -webkit-gradient(linear, right top, left bottom, from({{app.color1}}), to({{app.color2}}));">
+  <div class="wrapper">
+    <div class="store-btn">
+      <a ng-show="app.store" href="{{app.store}}" target="itunes_store"><img src="img/app-store.png"></a>
+      <span ng-hide="app.store"><img src="img/coming-soon.png"></span>
+    </div>
+
+    <img ng-src="img/{{app.key}}/icon.jpg">
+    <div class="title">{{app.title}}</div>
+
+    <div class="subtitle">Description:</div>
+    <p class="desc" ng-repeat="p in app.desc">{{p}}</p>
+
+    <div ng-show="app.numScreens > 0" class="subtitle">Screenshots:</div>
+    <img class="screen" ng-repeat="i in five" ng-src="img/{{app.key}}/screen-{{i}}.jpg">
+  </div>
+</div>
