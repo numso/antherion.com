@@ -6,7 +6,7 @@ var express = require('express');
 var  stylus = require('stylus');
 
 var app = express();
-app.set('port', process.env.PORT || 3010);
+app.set('port', process.env.PORT || 3000);
 
 var sessOptions = {
   key: 'antherion.sid',
@@ -44,10 +44,6 @@ app.configure('localdev', devConfig);
 // };
 app.configure('staging', devConfig);
 app.configure('production', devConfig);
-
-// fs.readdirSync(__dirname + '/routes').forEach(function (file) {
-//   require('./routes/' + file)(app);
-// });
 
 app.listen(app.get('port'), function () {
   console.log('Express server listening on port ' + app.get('port') + ' in environment ' + app.get('env'));
